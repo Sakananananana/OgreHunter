@@ -247,6 +247,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_7 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6958457543223577577, guid: b1f44588f2151b54398d5e53322ca879,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7771727414539506003, guid: b1f44588f2151b54398d5e53322ca879,
         type: 3}
       propertyPath: m_RootOrder
@@ -325,6 +330,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_7 Variant (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958457543223577577, guid: b1f44588f2151b54398d5e53322ca879,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7771727414539506003, guid: b1f44588f2151b54398d5e53322ca879,
         type: 3}
@@ -405,6 +415,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_7 Variant (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6958457543223577577, guid: b1f44588f2151b54398d5e53322ca879,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7771727414539506003, guid: b1f44588f2151b54398d5e53322ca879,
         type: 3}
       propertyPath: m_RootOrder
@@ -484,6 +499,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock_7 Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6958457543223577577, guid: b1f44588f2151b54398d5e53322ca879,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7771727414539506003, guid: b1f44588f2151b54398d5e53322ca879,
         type: 3}
       propertyPath: m_RootOrder
@@ -562,6 +582,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_7 Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958457543223577577, guid: b1f44588f2151b54398d5e53322ca879,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7771727414539506003, guid: b1f44588f2151b54398d5e53322ca879,
         type: 3}
@@ -720,6 +745,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rock_7 Variant (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958457543223577577, guid: b1f44588f2151b54398d5e53322ca879,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7771727414539506003, guid: b1f44588f2151b54398d5e53322ca879,
         type: 3}

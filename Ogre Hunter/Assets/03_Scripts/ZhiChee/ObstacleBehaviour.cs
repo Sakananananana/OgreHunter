@@ -17,6 +17,12 @@ public class ObstacleBehaviour : MonoBehaviour
             // has passed
             Invoke("ResetGame", waitTime);
         }
+
+        if (collision.gameObject.GetComponent<OgreBehaviour>())
+        {
+            // Destroy the player
+            Destroy(this.gameObject);
+        }
     }
     /// <summary>
     /// Will restart the currently loaded level

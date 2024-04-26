@@ -11,7 +11,17 @@ PrefabInstance:
     - target: {fileID: 4908600902771969712, guid: d7670bde5f251f8488dd0134dc2e3ea0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908600902771969712, guid: d7670bde5f251f8488dd0134dc2e3ea0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908600902771969712, guid: d7670bde5f251f8488dd0134dc2e3ea0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4908600902771969712, guid: d7670bde5f251f8488dd0134dc2e3ea0,
         type: 3}
@@ -67,6 +77,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716486499991737354, guid: d7670bde5f251f8488dd0134dc2e3ea0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -11,6 +11,7 @@ public class TileEndBehaviour : MonoBehaviour
     [Tooltip("How much time to wait before destroying " +
     "the tile after reaching the end")]
     public float destroyTime = 1.5f;
+
     private void OnTriggerEnter(Collider col)
     {
         // First check if we collided with the player
@@ -21,6 +22,16 @@ public class TileEndBehaviour : MonoBehaviour
             ().SpawnNextTile();
             // And destroy this entire tile after a short delay
             Destroy(transform.parent.gameObject, destroyTime);
+        }
+
+        if (col.gameObject.GetComponent<OgreBehaviour>())
+        {
+            GameObject.FindObjectOfType<OgreBehaviour>().count++;
+
+            if (GameObject.FindObjectOfType<OgreBehaviour>().count >= 4)
+            {
+                GameObject.FindObjectOfType<OgreBehaviour>().targetNum++;
+            }
         }
     }
 }
