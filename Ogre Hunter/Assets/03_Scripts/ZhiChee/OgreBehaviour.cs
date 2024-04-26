@@ -29,11 +29,9 @@ public class OgreBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(_target);
-        //Debug.Log(_target[targetNum].transform.position);
         direction = (_target[targetNum].transform.position - transform.position).normalized;
         transform.rotation = Quaternion.LookRotation(direction);
-        _rb.velocity = direction * maxSpeed;
+        _rb.velocity = new Vector3(direction.x * maxSpeed, _rb.velocity.y, direction.z * maxSpeed);
     }
 
 }
