@@ -8,6 +8,7 @@ public class StartButtonBehaviour : MonoBehaviour
     public GameObject gameCtrl;
     public GameObject ogreChar;
     public GameObject BgMusicStart;
+    public GameObject ScoreTxt;
     Animator ogreAnim;
     public Animator ogreAnimChild;
     Rigidbody ogreRb;
@@ -22,6 +23,7 @@ public class StartButtonBehaviour : MonoBehaviour
         Invoke("playerCharSetActive", 1.5f);
         Invoke("ogreScriptSetActive", 1f);
         Invoke("backgroundMusicSetActive", 1.5f);
+        Invoke("ScoreSetActive", 1.5f);
 
         this.gameObject.SetActive(false);
     }
@@ -46,5 +48,10 @@ public class StartButtonBehaviour : MonoBehaviour
     private void backgroundMusicSetActive()
     {
         BgMusicStart.SetActive(true);
+    }
+
+    private void ScoreSetActive()
+    {
+        ScoreTxt.SetActive(true);
     }
 }

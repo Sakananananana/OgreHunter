@@ -21,11 +21,17 @@ public class InGameButtonBehaviour : MonoBehaviour
     public AudioClip[] ButtonPress;
 
 
+    // For Lowering the volume of background music
+    private float CurrentVol;
+
+
     public void PauseBtn()
     {
         SoundCalling.instance.PlayRandomSoundFX(ButtonPress, transform, 1);
         Time.timeScale = 0.0f;
         PauseMenu.SetActive(true);
+        MusicVol.audioMixer.GetFloat("Music", out CurrentVol);
+        MusicVol.audioMixer.SetFloat("Music", CurrentVol - 10);
     }
 
     public void BackToMainMenuBtn()
@@ -37,13 +43,16 @@ public class InGameButtonBehaviour : MonoBehaviour
 
     public void ContinueBtn()
     {
+        SoundCalling.instance.PlayRandomSoundFX(ButtonPress, transform, 1);
         Time.timeScale = 1.0f;
         PauseMenu.SetActive(false);
+        MusicVol.audioMixer.SetFloat("Music", CurrentVol);
     }
 
 
     public void SettingBtn()    
     {
+        MusicVol.audioMixer.SetFloat("Music", CurrentVol);
         SoundCalling.instance.PlayRandomSoundFX(ButtonPress, transform, 1);
         SettingMenu.SetActive(true);
 
@@ -54,6 +63,8 @@ public class InGameButtonBehaviour : MonoBehaviour
     {
         SoundCalling.instance.PlayRandomSoundFX(ButtonPress, transform, 1);
         SettingMenu.SetActive(false);
+        MusicVol.audioMixer.GetFloat("Music", out CurrentVol);
+        MusicVol.audioMixer.SetFloat("Music", CurrentVol - 10);
     }
 
 
