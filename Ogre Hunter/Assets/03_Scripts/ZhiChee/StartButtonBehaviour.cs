@@ -7,6 +7,7 @@ public class StartButtonBehaviour : MonoBehaviour
     public GameObject playerChar;
     public GameObject gameCtrl;
     public GameObject ogreChar;
+    public GameObject BgMusicStart;
     Animator ogreAnim;
     public Animator ogreAnimChild;
     Rigidbody ogreRb;
@@ -20,7 +21,8 @@ public class StartButtonBehaviour : MonoBehaviour
         
         Invoke("playerCharSetActive", 1.5f);
         Invoke("ogreScriptSetActive", 1f);
-        
+        Invoke("backgroundMusicSetActive", 1.5f);
+
         this.gameObject.SetActive(false);
     }
 
@@ -39,5 +41,10 @@ public class StartButtonBehaviour : MonoBehaviour
         ogreRb.constraints = RigidbodyConstraints.FreezeRotation;
         
         
+    }
+
+    private void backgroundMusicSetActive()
+    {
+        BgMusicStart.SetActive(true);
     }
 }
