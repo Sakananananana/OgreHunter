@@ -10,6 +10,7 @@ public class InGameButtonBehaviour : MonoBehaviour
     [Header("Button Declaration")]
     [SerializeField] private GameObject SettingMenu;
     [SerializeField] private GameObject PauseMenu;
+    [SerializeField] private GameObject ResetMenu;
 
 
     [Header("Setting Panel: Volume")]
@@ -23,6 +24,15 @@ public class InGameButtonBehaviour : MonoBehaviour
 
     // For Lowering the volume of background music
     private float CurrentVol;
+
+
+    // Letting Other script to be able to access this code
+    public static InGameButtonBehaviour Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
 
     public void PauseBtn()
@@ -47,6 +57,18 @@ public class InGameButtonBehaviour : MonoBehaviour
         Time.timeScale = 1.0f;
         PauseMenu.SetActive(false);
         MusicVol.audioMixer.SetFloat("Music", CurrentVol);
+    }
+
+
+    public void RestartBtn()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+
+    public void ResetDisplay()
+    {
+        ResetMenu.SetActive(true);
     }
 
 

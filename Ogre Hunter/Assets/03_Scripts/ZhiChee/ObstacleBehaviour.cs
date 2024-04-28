@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement; // LoadScene
 public class ObstacleBehaviour : MonoBehaviour
 {
-    [Tooltip("How long to wait before restarting the game")]
-    public float waitTime = 2.0f;
+    [Tooltip("How long to wait before Displaying Restart Game Menu")]
+    public float waitTime = 1.0f;
+
+    
+
     private void OnCollisionEnter(Collision collision)
     {
         // First check if we collided with the player
@@ -25,11 +28,11 @@ public class ObstacleBehaviour : MonoBehaviour
         }
     }
     /// <summary>
-    /// Will restart the currently loaded level
+    /// Let Reset Game Menu to be active
     /// </summary>
     private void ResetGame()
     {
-        // Restarts the current level
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //Access InGameButtonBehaviour to open reset game menu
+        InGameButtonBehaviour.Instance.ResetDisplay();
     }
 }
