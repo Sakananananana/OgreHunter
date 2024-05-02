@@ -7,7 +7,11 @@ public class ObstacleBehaviour : MonoBehaviour
     [Tooltip("How long to wait before Displaying Restart Game Menu")]
     public float waitTime = 1.0f;
 
-    
+    [Tooltip("Rock Destroy Audio & Behaviour")]
+    public AudioSource obstacleSource;
+    public AudioClip obstacleSFX;
+    MeshRenderer obstacleMesh;
+    MeshCollider obstacleCollider;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -23,8 +27,19 @@ public class ObstacleBehaviour : MonoBehaviour
 
         if (collision.gameObject.GetComponent<OgreBehaviour>())
         {
-            // Destroy the player
-            Destroy(this.gameObject);
+            //Play Audio
+            obstacleSource.PlayOneShot(obstacleSFX);
+
+            //Set Mesh to Invisible
+            obstacleMesh = this.gameObject.GetComponent<MeshRenderer>();
+            obstacleMesh.enabled = false;
+
+            //Set Mesh Collider to False
+            obstacleCollider = this.gameObject.GetComponent<MeshCollider>();
+            obstacleCollider.enabled = false;
+
+            //Destroy the rock
+            Destroy(this.gameObject, 1f);
         }
     }
     /// <summary>
